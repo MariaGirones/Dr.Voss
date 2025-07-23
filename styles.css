@@ -204,13 +204,14 @@ h3 {
 }
 
 /* Recommendations Section */
-.contact-container {
-  max-width: 400px;
-}
 .Recommendations {
   padding: 2rem;
   background-color: #f9f9f9;
   margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .Recommendations h3 {
@@ -223,7 +224,7 @@ h3 {
 
 .recommendation-boxes {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
   max-width: 1200px;
@@ -324,6 +325,7 @@ button#recommend_btn {
 button#recommend_btn:hover {
   background-color: #3f51b5;
 }
+
 /* Popup Styling */
 .popup {
   position: fixed;
@@ -332,14 +334,14 @@ button#recommend_btn:hover {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none; /* Hide popup by default */
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 999;
 }
 
 .popup.active {
-  display: flex; /* Show popup when active */
+  display: flex;
 }
 
 .popup-content {
