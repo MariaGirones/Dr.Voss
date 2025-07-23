@@ -85,11 +85,14 @@ h3 {
     font-family: monospace;
 }
 
+/* Updated: about image more elegant & smaller */
 .aboutTxtImg img {
-    max-width: 300px;
     width: 100%;
+    max-width: 250px;
     height: auto;
     border-radius: 10px;
+    margin: 0 auto;
+    display: block;
 }
 
 .Skills {
@@ -369,5 +372,6 @@ button#recommend_btn:hover {
         padding: 10px;
     }
 }
+
 
 >>>>>>> 91c91db605ff673f40ecbdcf65ac0ace8649697f
