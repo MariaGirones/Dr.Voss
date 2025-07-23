@@ -1,28 +1,23 @@
 <<<<<<< HEAD
 function handleSubmit(event) {
-  event.preventDefault(); // Prevent default form submission
+  event.preventDefault();
 
-  const name = document.querySelector("input[name='name']").value.trim();
-  const text = document.querySelector("textarea[name='recommendation']").value.trim();
-  const imageInput = document.getElementById("imageInput");
+  const form = event.target;
+  const name = form.querySelector("input[name='name']").value.trim();
+  const text = form.querySelector("textarea[name='recommendation']").value.trim();
+  const imageInput = form.querySelector("#imageInput");
   const file = imageInput.files[0];
 
   if (file) {
     const reader = new FileReader();
-    reader.onload = function(e) {
-      addRecommendation(name, text, e.target.result);
-    };
+    reader.onload = (e) => addRecommendation(name, text, e.target.result);
     reader.readAsDataURL(file);
   } else {
     addRecommendation(name, text, null);
   }
 
-  const popup = document.getElementById("popup");
-  if (popup) {
-    popup.classList.add("show");
-  }
-
-  document.querySelector(".recommendation-form").reset();
+  showPopup();
+  form.reset();
   return false;
 }
 
@@ -37,19 +32,22 @@ function addRecommendation(name, text, imageSrc) {
   img.alt = `${name}'s photo`;
 
   const span = document.createElement("span");
-  span.innerText = `"${text}" - ${name}`;
+  span.textContent = `"${text}" — ${name}`;
 
   card.appendChild(img);
   card.appendChild(span);
-
   container.prepend(card);
+}
+
+function showPopup() {
+  const popup = document.getElementById("popup");
+  popup.classList.add("show");
+  popup.querySelector("button").focus();
 }
 
 function hidePopup() {
   const popup = document.getElementById("popup");
-  if (popup) {
-    popup.classList.remove("show");
-  }
+  popup.classList.remove("show");
 }
 
 
