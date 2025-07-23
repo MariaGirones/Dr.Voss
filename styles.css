@@ -260,7 +260,7 @@ h3 {
 
 /* Contact Section */
 #contact {
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
   background-color: #f9f9f9;
   text-align: center;
 }
@@ -269,34 +269,35 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Allow it to wrap on small screens */
+  min-height: 100%;
+  width: 100%;
 }
 
 .recommendation-form fieldset {
   border: 2px solid #ccc;
-  border-radius: 12px;
-  padding: 2rem;
+  border-radius: 14px;
+  padding: 3rem 2rem;
   width: 100%;
-  max-width: 500px;
+  max-width: 700px; /* Bigger */
   background: #fff;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   box-sizing: border-box;
 }
 
 .form-title {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #333;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1.2rem;
-  font-size: 1rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
   border-radius: 8px;
   border: 1px solid #bbb;
   box-sizing: border-box;
@@ -307,8 +308,8 @@ h3 {
 button#recommend_btn {
   background-color: #5c6bc0;
   color: white;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
