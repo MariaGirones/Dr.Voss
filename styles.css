@@ -204,6 +204,9 @@ h3 {
 }
 
 /* Recommendations Section */
+.contact-container {
+  max-width: 400px;
+}
 .Recommendations {
   padding: 2rem;
   background-color: #f9f9f9;
