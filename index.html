@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Dr.Voss</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+     <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#recommendations">Recommendations</a>
+        <a href="contact">Contact</a>
+    </nav>
+    <main>
+        <h1>Dr.Voss</h1>
+        <div class="Logo">
+        <img src="images/VOSS-removebg-preview.png">
+         <h2>Space Architect / Off-World Colony Designer</h2>
+        </div>
+    <section class="AboutMe" id="about">
+       <h3>About Dr.Voss</h3>
+       <div class="aboutTxtImg">
+        <p>
+            Dr. Elara Voss is a leading <strong>space architect</strong> and <strong>off-world colony designer</strong>, 
+            specializing in sustainable habitats for Mars, lunar bases, and orbital stations. 
+            With 15 years of experience in zero-gravity construction and bio-regenerative systems, 
+            she bridges the gap between theoretical astrophysics and practical engineering.
+        </p>
+        <img src="images/images.jpeg">
+       </div>
+    </section>
+    <section class="Skills" id="skills">
+        <h3>Technical Skills</h3>
+         <ul class="tech-skills">
+        <li>🪐 <strong>Habitat Design</strong>: Mars/lunar/orbital structures</li>
+        <li>🧱 <strong>3D-Printing</strong>: In-situ resource utilization</li>
+        <li>🌀 <strong>Zero-G Construction</strong>: Modular assembly in zero-gravity</li>
+        <li>🌱 <strong>Closed Ecosystems</strong>: Bio-regenerative life support</li>
+    </ul>
+    </section>
+    <section class="Projects" id="projects">
+        <h3>Main Projects</h3>
+        <div class="ProjectsContainer">
+        <div class="Eden">
+            <h4>Eden-1</h4>
+            <p><strong>Location:</strong>2M Crater, Mars</p>
+            <img src="images/Eden.avif">
+            <p>Proved humans can harvest Martian resources for survival</p>
+        </div>
+        <div class="Moon-City">
+            <h4>Moon-City</h4>
+            <p><strong>Location:</strong>Earth-Moon L5 point</p>
+            <img src="images/rotation.jpeg">
+            <p>Rotating Space City with a solar mirror array for agriculture</p>
+        </div>
+        <div class="projectAstra">
+            <h4>Project Astra</h4>
+            <p><strong>Location:</strong>Astra orbital station.</p>
+            <img src="images/nave.webp">
+            <p><strong>active project since 2024.</strong> It is the first orbital base, optimized for sustainable human life</p>
+        </div>
+        </div></section>
+    <section class="Recommendations" id="recommendations">
+  <h3>Recommendations</h3>
+  <div class="recommendation-boxes">
+    <div class="Nasa">
+      <img src="images/Nasa.png" />
+      <span class="nasa-quote">
+        "Dr. Voss' work on radiation-shielded modular architectures revolutionized our Mars program. 
+        Her Eden-1 habitat design solved thermal regulation issues that stumped our team for years. 
+        She operates at the rare intersection of visionary thinking and engineering rigor."
+      </span>
+    </div>
+    <div class="SpaceX">
+      <img src="images/YA.jpg" />
+      <span class="spacex-quote">
+        "When we needed someone to reimagine orbital construction for Starship deployments, 
+        Elara delivered designs that cut assembly time by 30%. Her ability to merge 
+        theoretical physics with practical aerospace constraints is unparalleled. 
+        She's the first person we call for off-world challenges."
+      </span>
+    </div>
+    <div class="Astronaut">
+      <img src="images/Astronauta.jpg" />
+      <span class="mit-quote">
+        "We shared a lab bench at MIT where Elara first sketched her rotating habitat concepts 
+        on coffee-stained napkins. Twenty years later, I've lived in her Moon-City prototype.  
+        Her designs prioritize human needs in ways only someone who truly understands 
+        spaceflight psychology could achieve."
+      </span>
+    </div>
+  </div>
+</section>
+<!-- Recommendation Form -->
+    <section id="contact">
+  <div class="contact-container">
+   <form class="recommendation-form" onsubmit="return handleSubmit(event)">
+  <fieldset>
+    <legend class="form-title">Leave a Recommendation</legend>
+
+    <input class="form-input" type="text" name="name" placeholder="Your Name" required />
+    
+    <textarea class="form-textarea" name="recommendation" placeholder="Your recommendation..." required></textarea>
+
+    <!-- Image upload -->
+    <input class="form-input" type="file" id="imageInput" accept="image/*" />
+
+    <button type="submit" id="recommend_btn">Submit</button>
+  </fieldset>
+</form>
+
+  </div>
+</section>
+
+<!-- Confirmation Popup -->
+<div id="popup" class="popup" style="display:none;">
+  <div class="popup-content">
+    <p>Wow! Thank you very much!</p>
+    <button type="button" onclick="hidePopup()">OK</button>
+  </div>
+</div>
+    </main>
+    <footer>
+        <p>**Dr.Voss is a fictional character</p>
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+* {
+    background-color: #FBFCF6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    background-color: #FBFCF6;
+}
+.navbar a{
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: #0A7BFF;
+}
+ h1 {
+    position: absolute;
+    align-self: flex-start;
+    margin: 20px;
+    color: #19191a;
+ }
+h2 {
+    font-family: monospace, sans-serif;
+    font-size: 1.8rem;
+    background: linear-gradient(90deg, #788799, #bda6d1);
+    text-align:center;
+    padding-top: auto;
+ }
+.Logo {
+   display: flex;
+   flex-direction: column; /* stack items vertically */
+   justify-content: center;
+   align-items: center;
+}
+.Logo img {
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+h3 {
+    font-size: 2rem;          /* bigger size */
+    font-family: monospace;
+    text-decoration: underline;
+    margin-bottom: 0.5rem;    /* reduce space below h3 */
+    margin-top: 1rem;         /* optional: add some space above if needed */
+    color: #333;              /* nice dark color */
+}
+
+.aboutTxtImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* space between text and image */
+    padding: 2rem;
+    flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.aboutTxtImg p {
+    max-width: 500px;
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    font-family: monospace;
+}
+
+.aboutTxtImg img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    flex: 1;
+}
+.Skills {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f5f7fa; /* soft white for elegance */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.Skills h3 {
+    font-size: 2rem;
+    text-decoration: underline;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+
+.tech-skills {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+
+.tech-skills li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    background-color: #ffffff;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.Projects {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Projects h3 {
+    font-size: 2rem;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.ProjectsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.ProjectsContainer > div {
+    flex: 0 1 calc(33.333% - 1.34rem); /* 3 items per row accounting for gap */
+    background-color: #f5f7fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ProjectsContainer h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.ProjectsContainer p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    margin: 0.5rem 0;
+}
+
+.ProjectsContainer img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+.Recommendations {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.Recommendations h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+  color: #333;
+}
+
+.recommendation-boxes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.recommendation-boxes > div {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.recommendation-boxes img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.recommendation-boxes span {
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}
+/* Contact Section */
+#contact {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+}
+
+.recommendation-form fieldset {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+button#recommend_btn {
+  background-color: #5c6bc0;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#recommend_btn:hover {
+  background-color: #3f51b5;
+}
+
+/* Popup Styling */
+/* === Confirmation Popup Styles === */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background-color: #ffffff; /* white background */
+  color: #1a1a1a; /* dark gray text */
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.popup-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.popup-content button {
+  background-color: #a78bfa; /* lilac */
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+  background-color: #8b5cf6; /* slightly darker purple */
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+  .ProjectsContainer > div {
+    flex: 0 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .ProjectsContainer > div {
+    flex: 0 1 100%;
+  }
+}
