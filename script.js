@@ -41,14 +41,16 @@ function addRecommendation(name, text, imageSrc) {
 
 function showPopup() {
   const popup = document.getElementById("popup");
-  popup.classList.add("show");
-  popup.querySelector("button").focus();
+  if (!popup) return;
+  popup.classList.add("active");
+  const btn = popup.querySelector("button");
+  if (btn) btn.focus();
 }
 
 function hidePopup() {
   const popup = document.getElementById("popup");
-  popup.classList.remove("show");
+  if (!popup) return;
+  popup.classList.remove("active");
 }
-
 
 >>>>>>> 91c91db605ff673f40ecbdcf65ac0ace8649697f
