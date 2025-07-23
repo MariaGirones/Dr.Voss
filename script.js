@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -10,14 +9,18 @@ function handleSubmit(event) {
 
   if (file) {
     const reader = new FileReader();
-    reader.onload = (e) => addRecommendation(name, text, e.target.result);
+    reader.onload = (e) => {
+      addRecommendation(name, text, e.target.result);
+      showPopup();
+      form.reset();
+    };
     reader.readAsDataURL(file);
   } else {
     addRecommendation(name, text, null);
+    showPopup();
+    form.reset();
   }
 
-  showPopup();
-  form.reset();
   return false;
 }
 
@@ -53,4 +56,11 @@ function hidePopup() {
   popup.classList.remove("active");
 }
 
->>>>>>> 91c91db605ff673f40ecbdcf65ac0ace8649697f
+// Add event listener for popup close button
+document.addEventListener("DOMContentLoaded", () => {
+  const closeBtn = document.querySelector(".popup-content button");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", hidePopup);
+  }
+});
+
