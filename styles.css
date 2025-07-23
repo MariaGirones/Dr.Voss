@@ -1,23 +1,12 @@
 <<<<<<< HEAD
+/* General Layout */
 body {
   background-color: #FBFCF6;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-}
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  background-color: #f0f0f0;
-  padding: 10px;
-}
-
-.navbar a {
   color: #333;
-  text-decoration: none;
 }
 
 main {
@@ -26,23 +15,66 @@ main {
   padding: 1rem;
 }
 
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #0A7BFF;
+}
+
+/* Headings */
 h1, h2, h3 {
   text-align: center;
   margin: 1rem 0;
+  color: #222;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-family: monospace;
+  background: linear-gradient(90deg, #788799, #bda6d1);
+  color: #fff;
+  padding: 0.3rem 0;
+}
+
+h3 {
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+
+/* Logo */
 .Logo img {
-  max-width: 300px;
+  max-width: 250px;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 10px auto;
 }
 
+/* About Section */
 .aboutTxtImg {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   align-items: center;
+  margin: 1rem 0;
 }
 
 .aboutTxtImg p {
@@ -50,50 +82,117 @@ h1, h2, h3 {
 }
 
 .aboutTxtImg img {
-  max-width: 250px;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
   border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/* Skills Section */
+.Skills {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+.tech-skills {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tech-skills li {
+  background: #fff;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Projects Section */
 .ProjectsContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  margin: 1rem 0;
 }
 
 .ProjectsContainer > div {
-  flex: 1 1 300px;
+  flex: 1 1 250px;
   background: #fff;
-  padding: 1rem;
   border-radius: 8px;
+  padding: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   text-align: center;
 }
 
+.ProjectsContainer img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+/* Recommendations Section */
 .recommendation-boxes {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  margin: 1rem 0;
 }
 
 .recommendation-boxes > div {
+  flex: 1 1 250px;
   background: #fff;
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
-  flex: 1 1 250px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .recommendation-boxes img {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
   object-fit: cover;
+  border-radius: 50%;
   margin-bottom: 10px;
 }
 
+.recommendation-boxes span {
+  display: block;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Dynamic Cards */
+.dynamic-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dynamic-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Form Section */
 .recommendation-form fieldset {
   max-width: 400px;
   margin: 20px auto;
@@ -108,6 +207,10 @@ h1, h2, h3 {
   width: 100%;
   margin-bottom: 10px;
   padding: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
 }
 
 .recommendation-form button {
@@ -117,12 +220,14 @@ h1, h2, h3 {
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 4px;
+  transition: background 0.3s ease;
 }
 
 .recommendation-form button:hover {
   background: #3f51b5;
 }
 
+/* Popup */
 .popup {
   display: none;
   position: fixed;
@@ -139,10 +244,30 @@ h1, h2, h3 {
 
 .popup-content {
   background: white;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 8px;
   text-align: center;
+  max-width: 300px;
+  width: 90%;
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .aboutTxtImg {
+    flex-direction: column;
+  }
+  .ProjectsContainer > div,
+  .recommendation-boxes > div {
+    flex: 1 1 100%;
+  }
+}
 
 >>>>>>> 91c91db605ff673f40ecbdcf65ac0ace8649697f
