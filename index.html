@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>🚀 Dr.Voss</title>
-    <base href="/Dr.Voss/" />
+    <!-- Removed base href for better GitHub Pages compatibility -->
+    <!-- <base href="/Dr.Voss/" /> -->
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -113,53 +114,16 @@
             </div>
         </section>
         <!-- Confirmation Popup -->
-       <!-- Confirmation Popup -->
-<style>
-  #popup {
-    display: none; /* hidden by default */
-    position: fixed;
-    top: 0; left: 0; width: 100vw; height: 100vh;
-    background-color: rgba(0,0,0,0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    display: flex; /* important for centering */
-  }
-
-  .popup-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  }
-
-  .popup-content button {
-    margin-top: 15px;
-    padding: 8px 16px;
-    cursor: pointer;
-  }
-</style>
-
-<div id="popup" class="popup">
-  <div class="popup-content">
-    <p>Wow! Thank you very much!</p>
-    <button type="button" onclick="hidePopup()">OK</button>
-  </div>
-</div>
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <p>Wow! Thank you very much!</p>
+            <button type="button" onclick="hidePopup()">OK</button>
+          </div>
+        </div>
     </main>
     <footer>
         <p>**Dr.Voss is a fictional character</p>
     </footer>
     <script src="script.js"></script>
-    <script>
-  function hidePopup() {
-    const popup = document.getElementById("popup");
-    if (popup) {
-      popup.style.display = "none";
-    }
-  }
-</script>
 </body>
 </html>
