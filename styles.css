@@ -1,351 +1,389 @@
+/* Reset and base styles */
 * {
-    background-color: #FBFCF6;
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: #FBFCF6;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
+/* Navbar */
 .navbar {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    background-color: #FBFCF6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  background-color: #FBFCF6;
+  width: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
 }
 
 .navbar a {
-    color: gray;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: gray;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #0A7BFF;
+  color: #0A7BFF;
 }
 
+/* Headings */
 h1 {
-    position: absolute;
-    align-self: flex-start;
-    margin: 20px;
-    color: #19191a;
+  position: absolute;
+  align-self: flex-start;
+  margin: 20px;
+  color: #19191a;
+  font-weight: bold;
 }
 
 h2 {
-    font-family: monospace, sans-serif;
-    font-size: 1.8rem;
-    background: linear-gradient(90deg, #788799, #bda6d1);
-    text-align: center;
-    padding-top: auto;
-}
-
-.Logo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.Logo img {
-    max-width: 100%;
-    width: 300px;
-    height: auto;
-    margin-bottom: 1rem;
-    object-fit: contain;
+  font-family: monospace, sans-serif;
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #788799, #bda6d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding-top: 0;
+  margin: 1.5rem 0;
 }
 
 h3 {
-    font-size: 2rem;
-    font-family: monospace;
-    text-decoration: underline;
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-    color: #333;
+  font-size: 2rem;
+  font-family: monospace;
+  text-decoration: underline;
+  margin: 1rem 0 0.5rem 0;
+  color: #333;
 }
 
+/* Logo Section */
+.Logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.Logo img {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+/* About section */
 .aboutTxtImg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .aboutTxtImg p {
-    max-width: 500px;
-    flex: 1;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
-    font-family: monospace;
+  max-width: 500px;
+  flex: 1 1 400px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  font-family: monospace;
 }
 
 .aboutTxtImg img {
-    max-width: 100%;
-    width: 280px;
-    height: auto;
-    border-radius: 10px;
-    flex: 0 0 auto;
+  max-width: 100%;
+  flex: 1 1 280px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
+/* Skills Section */
 .Skills {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #f5f7fa;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #f5f7fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .Skills h3 {
-    font-size: 2rem;
-    text-decoration: underline;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    color: #333;
+  font-size: 2rem;
+  text-decoration: underline;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
 }
 
 .tech-skills {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: justify;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: justify;
 }
 
 .tech-skills li {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #444;
-    background-color: #ffffff;
-    padding: 0.8rem 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  background-color: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
+/* Projects Section */
 .Projects {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  text-align: center;
 }
 
 .Projects h3 {
-    font-size: 2rem;
-    text-decoration: underline;
-    margin-bottom: 2rem;
-    color: #333;
+  font-size: 2rem;
+  text-decoration: underline;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
 .ProjectsContainer {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .ProjectsContainer > div {
-    flex: 0 1 calc(33.333% - 1.34rem);
-    background-color: #f5f7fa;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  flex: 0 1 calc(33.333% - 1.34rem);
+  background-color: #f5f7fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .ProjectsContainer h4 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-    color: #222;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #222;
 }
 
 .ProjectsContainer p {
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.5;
-    margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  margin: 0.5rem 0;
 }
 
 .ProjectsContainer img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 1rem 0;
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1rem 0 0 0;
 }
 
+/* Recommendations Section */
 .Recommendations {
-    padding: 2rem;
-    background-color: #f9f9f9;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  margin: 2rem 0;
 }
 
 .Recommendations h3 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-decoration: underline;
-    color: #333;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+  color: #333;
 }
 
 .recommendation-boxes {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .recommendation-boxes > div {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    flex: 1 1 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .recommendation-boxes img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
 }
 
 .recommendation-boxes span {
-    font-style: italic;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #444;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
 }
 
 /* Contact Section */
 #contact {
-    padding: 3rem 1rem;
-    background-color: #f9f9f9;
-    text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  max-width: 600px;
+  margin: 2rem auto;
 }
 
 .contact-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .recommendation-form fieldset {
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 2rem;
-    max-width: 500px;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 }
 
 .form-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
 }
 
 .form-input,
 .form-textarea {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    border-radius: 6px;
-    border: 1px solid #bbb;
-    box-sizing: border-box;
-    font-family: inherit;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  font-family: inherit;
 }
 
 button#recommend_btn {
-    background-color: #5c6bc0;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #5c6bc0;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button#recommend_btn:hover {
-    background-color: #3f51b5;
+  background-color: #3f51b5;
 }
 
 /* Popup Styling */
 .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none; /* Hide popup by default */
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Hide popup by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
 .popup.active {
-    display: flex; /* Show popup when active */
+  display: flex; /* Show popup when active */
 }
 
 .popup-content {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    border-radius: 12px;
-    padding: 2rem;
-    max-width: 400px;
-    width: 90%;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #fff;
+  color: #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
 .popup-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
 .popup-content button {
-    background-color: #a78bfa;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #a78bfa;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .popup-content button:hover {
-    background-color: #8b5cf6;
+  background-color: #8b5cf6;
 }
 
-/* Responsive */
+/* Responsive styles */
 @media (max-width: 900px) {
-    .ProjectsContainer > div {
-        flex: 0 1 calc(50% - 1rem);
-    }
+  .ProjectsContainer > div {
+    flex: 0 1 calc(50% - 1rem);
+  }
+
+  .recommendation-boxes > div {
+    flex: 1 1 45%;
+  }
+
+  .aboutTxtImg {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 600px) {
-    .ProjectsContainer > div {
-        flex: 0 1 100%;
-    }
+  .ProjectsContainer > div,
+  .recommendation-boxes > div {
+    flex: 0 1 100%;
+  }
 }
+
