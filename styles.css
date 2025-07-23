@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 * {
     background-color: #FBFCF6;
     font-family: Arial, Helvetica, sans-serif;
@@ -9,7 +8,7 @@ body {
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-    margin: 0; /* reset default margin */
+    margin: 0;
 }
 
 .navbar {
@@ -46,35 +45,35 @@ h2 {
 
 .Logo {
     display: flex;
-    flex-direction: column; /* stack items vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .Logo img {
     max-width: 100%;
-    width: 300px; /* base width */
+    width: 300px;
     height: auto;
     margin-bottom: 1rem;
     object-fit: contain;
 }
 
 h3 {
-    font-size: 2rem;          /* bigger size */
+    font-size: 2rem;
     font-family: monospace;
     text-decoration: underline;
-    margin-bottom: 0.5rem;    /* reduce space below h3 */
-    margin-top: 1rem;         /* optional: add some space above if needed */
-    color: #333;              /* nice dark color */
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    color: #333;
 }
 
 .aboutTxtImg {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem; /* space between text and image */
+    gap: 2rem;
     padding: 2rem;
-    flex-wrap: wrap; /* allows wrapping on small screens */
+    flex-wrap: wrap;
 }
 
 .aboutTxtImg p {
@@ -91,14 +90,14 @@ h3 {
     width: 280px;
     height: auto;
     border-radius: 10px;
-    flex: 0 0 auto; /* prevent shrinking too much */
+    flex: 0 0 auto;
 }
 
 .Skills {
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #f5f7fa; /* soft white for elegance */
+    background-color: #f5f7fa;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
@@ -151,7 +150,7 @@ h3 {
 }
 
 .ProjectsContainer > div {
-    flex: 0 1 calc(33.333% - 1.34rem); /* 3 items per row accounting for gap */
+    flex: 0 1 calc(33.333% - 1.34rem);
     background-color: #f5f7fa;
     padding: 1.5rem;
     border-radius: 10px;
@@ -178,7 +177,7 @@ h3 {
 
 .ProjectsContainer img {
     width: 100%;
-    height: auto; /* changed from fixed height */
+    height: auto;
     max-height: 200px;
     object-fit: cover;
     border-radius: 8px;
@@ -289,27 +288,26 @@ button#recommend_btn:hover {
 }
 
 /* Popup Styling */
-/* === Confirmation Popup Styles === */
 .popup {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
-    display: none; /* hide popup by default */
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Hide popup by default */
     justify-content: center;
     align-items: center;
     z-index: 999;
 }
 
 .popup.active {
-    display: flex; /* show popup when active */
+    display: flex; /* Show popup when active */
 }
 
 .popup-content {
-    background-color: #ffffff; /* white background */
-    color: #1a1a1a; /* dark gray text */
+    background-color: #ffffff;
+    color: #1a1a1a;
     border-radius: 12px;
     padding: 2rem;
     max-width: 400px;
@@ -325,7 +323,7 @@ button#recommend_btn:hover {
 }
 
 .popup-content button {
-    background-color: #a78bfa; /* lilac */
+    background-color: #a78bfa;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
@@ -336,10 +334,10 @@ button#recommend_btn:hover {
 }
 
 .popup-content button:hover {
-    background-color: #8b5cf6; /* slightly darker purple */
+    background-color: #8b5cf6;
 }
 
-/* Responsive tweaks */
+/* Responsive */
 @media (max-width: 900px) {
     .ProjectsContainer > div {
         flex: 0 1 calc(50% - 1rem);
@@ -351,5 +349,3 @@ button#recommend_btn:hover {
         flex: 0 1 100%;
     }
 }
-
->>>>>>> 91c91db605ff673f40ecbdcf65ac0ace8649697f
