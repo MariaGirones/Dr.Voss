@@ -668,4 +668,8 @@ button#recommend_btn:hover {
     flex: 0 1 100%;
   }
 }
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
 >>>>>>> 91c91db605ff673f40ecbdcf65ac0ace8649697f
